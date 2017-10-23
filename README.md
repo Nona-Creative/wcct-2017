@@ -1,1 +1,3 @@
-# wcct-2017
+# Vue.js and WordPress
+
+Starter files are currently being worked on.
