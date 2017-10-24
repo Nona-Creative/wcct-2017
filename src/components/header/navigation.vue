@@ -15,9 +15,7 @@
       this.fetchData()
     },
     methods: {
-      fetchData () {
-       
-      }
+      fetchData () {}
     }
   }
 </script>
