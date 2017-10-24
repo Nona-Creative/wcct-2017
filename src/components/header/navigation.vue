@@ -1,7 +1,7 @@
 <template>
   <ul v-if="navigation">
     <li v-for="navItem in navigation.items">
-      <router-link :to="{ path: getRelativeURL(navItem.url) }">{{ navItem.title }}</router-link>
+      <router-link :to="{ path: navItem.url }">{{ navItem.title }}</router-link>
     </li>
   </ul>
 </template>
@@ -24,11 +24,6 @@
           .then(response => {
             this.navigation = response.data
           })
-      },
-      getRelativeURL (absoluteURL) {
-        const domain = window.location.hostname
-        const protocol = window.location.protocol
-        return absoluteURL.replace(`${protocol}//${domain}`, '')
       }
     }
   }
