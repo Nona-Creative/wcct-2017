@@ -1,9 +1,5 @@
 <template>
-  <ul v-if="navigation">
-    <li v-for="navItem in navigation.items">
-      <router-link :to="{ path: navItem.url }">{{ navItem.title }}</router-link>
-    </li>
-  </ul>
+
 </template>
 
 <script>
@@ -20,10 +16,7 @@
     },
     methods: {
       fetchData () {
-        axios.get('http://localhost/wp-json/wp-api-menus/v2/menus/176')
-          .then(response => {
-            this.navigation = response.data
-          })
+       
       }
     }
   }
