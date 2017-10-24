@@ -5,6 +5,7 @@
         <router-link :to="`blog/${post.slug}`">
           <div class="summary">
             <h2 v-html="post.title.rendered"></h2>
+            <span class="date">Published on: {{ post.date }}</span>
             <div class="excerpt" v-html="post.excerpt.rendered"></div>
           </div>
         </router-link>
@@ -35,3 +36,15 @@
     }
   }
 </script>
+
+<style scoped>
+  h2 {
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  .date {
+    font-size: 12px;
+    font-style: italic;
+  }
+</style>

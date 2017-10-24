@@ -15,13 +15,12 @@
       this.fetchData()
     },
     watch: {
-      '$route' (to, from) {
+      '$route' () {
         this.fetchData()
       }
     },
     methods: {
       fetchData () {
-        console.log(this.$route.params)
         axios.get(`http://localhost/wp-json/wp/v2/pages?slug=${this.$route.params.slug}`)
           .then(response => {
             this.post = response.data
