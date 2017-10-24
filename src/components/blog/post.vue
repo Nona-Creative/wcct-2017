@@ -16,7 +16,7 @@
     },
     methods: {
       fetchData () {
-        axios.get(`http://localhost/wp-json/wp/v2/posts?slug=${this.$route.params.slug}`)
+        axios.get(`http://localhost/wp-json/wp/v2/posts`)
           .then(response => {
             this.post = response.data
           })
