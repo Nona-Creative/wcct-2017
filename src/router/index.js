@@ -24,16 +24,6 @@ export default new Router({
       path: '/:slug',
       name: 'Page',
       component: Page
-    },
-    {
-      path: '/:slug/:slug',
-      name: 'Level-2',
-      component: Page
-    },
-    {
-      path: '/:slug/:slug/:slug',
-      name: 'Level-3',
-      component: Page
     }
   ]
 })
